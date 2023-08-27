@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #3B4664;
+    transition: .4s ease-in-out background-color;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_calculataire {
+    width: 450px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+}
+.header .title {
+    text-transform: lowercase;
+    color: #fff;
+    font-size: 25px;
+}
+.header .theme {
+    display: flex;
+    gap: 14px;
+    align-items: flex-end;
+}
+.header .theme > span {
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.header .theme .theme_bx {
+    width: 60px;
+}
+.header .theme .theme_bx ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+}
+.header .theme .theme_bx ul li {
+    list-style: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.header .theme .theme_bx .changer {
+    width: 100%;
+    padding: .6rem .1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    background-color: #252D44;
+}
+.header .theme .theme_bx .changer span {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    border-radius: 50%;
+    left: 5px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #F26F5B;
+}
+.inp {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+.inp input {
+    width: 100%;
+    font-size: 40px;
+    color: #fff;
+    text-align: right;
+    font-weight: bold;
+    padding: 2rem 2rem;
+    border: transparent;
+    border-radius: 10px;
+    outline: none;
+    background-color: #181F32;
+}
+.container_num {
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #252C46;
+}
+.container_num .number_container {
+    display: grid;
+    margin-bottom: 15px;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+.container_num .number_container button {
+    padding: 1rem;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #464859;
+    font-size: 26px;
+    font-weight: bold;
+    background-color: #EAE3DB;
+    transition: .3s ease-in-out background-color;
+    box-shadow: 0 2px 1px 1px rgb(178 163 158 / 90%);
+}
+.container_num .number_container button:not(.del):hover {
+    background-color: #fff;
+}
+.container_num .number_container button.del {
+    background-color: #64729A;
+    box-shadow: 0 2px 1px 1px #404C6C;
+    color: #fff;
+}
+.container_num .number_container button.del:hover,
+.btns_reset button.reset:hover{
+    background-color: #A2B3E1;
+}
+.btns_reset {
+    display: flex;
+    gap: 15px;
+}
+.btns_reset button {
+    transition: .3s ease-in-out background-color;
+    flex: 1;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 26px;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    border: transparent;
+    color: #fff;
+    text-transform: uppercase;
+}
+.btns_reset button.reset {
+    background-color: #64729A;
+    box-shadow: 0 2px 1px 1px #404C6C;
+}
+.btns_reset button.result_show {
+    background-color: #D13F30;
+    box-shadow: 0 2px 1px 1px #6F2A2A;
+}
+.btns_reset button.result_show:hover {
+    background-color: #F96C5B;
+}
+
+/* Start White Theme */
+.white_theme {
+    background-color: #E6E6E6;
+}
+.white_theme .header .title {
+    color: #333;
+}
+.white_theme .header .theme .theme_bx ul li,
+.white_theme .header .theme > span{color: #333;}
+.white_theme .header .theme .theme_bx .changer {
+    background-color: #D4CDCD;
+}
+.white_theme .inp input {
+    background-color: #EEEEEE;
+    color: #333;
+}
+.white_theme .container_num {
+    background-color: #D3CDCD;
+}
+.white_theme .container_num .number_container button {
+    background-color: #E5E4E0;
+}
+.white_theme .container_num .number_container button.del,
+.white_theme .btns_reset button.reset{
+    background-color: #388187;
+    box-shadow: 0 2px 1px 1px #1C6067;
+}
+.white_theme .container_num .number_container button.del:hover {
+    background-color: #62B5BD;
+}
+.white_theme .btns_reset button.result_show {
+    background-color: #C85401;
+}
+.white_theme .btns_reset button.result_show:hover {
+    background-color: #FF8B38;
+}
+/* End White Theme */
+
+/* Start Yellow Theme */
+.yellow_theme {
+    background-color: #17062A;
+}
+.yellow_theme .header .title {
+    color: #FFE53F;
+}
+.yellow_theme .header .theme .theme_bx ul li,
+.yellow_theme .header .theme > span{color: #FFE53F;}
+.yellow_theme .header .theme .theme_bx .changer {
+    background-color: #1E0836;
+}
+.yellow_theme .inp input {
+    background-color: #1E0836;
+    color: #FFE53F;
+}
+.yellow_theme .header .theme .theme_bx .changer span {
+    background-color: #23D3CD;
+}
+.yellow_theme .container_num {
+    background-color: #1E0836 !important;
+}
+.yellow_theme .container_num .number_container button {
+    background-color: #331B4D;
+    color: #FFE53F;
+    box-shadow: 0 2px 1px 1px #851C9D;
+}
+.yellow_theme .container_num .number_container button:hover {
+    background-color: #6B34AC;
+}
+.yellow_theme .container_num .number_container button.del,
+.yellow_theme .btns_reset button.reset{
+    background-color: #56077C;
+    color: #fff;
+    box-shadow: 0 2px 1px 1px #BE19F3;
+}
+.yellow_theme .container_num .number_container button.del:hover,
+.yellow_theme .btns_reset button.reset:hover{
+    background-color: #8332B1;
+}
+.yellow_theme .btns_reset button.result_show {
+    background-color: #00DECF;
+    color: #333;
+    box-shadow: 0 2px 1px 1px #8BF3F6;
+
+}
+.yellow_theme .btns_reset button.result_show:hover {
+    background-color: #94FFF9;
+}
+/* End White Theme */
+@media (max-width:767px) {
+    .container_calculataire {
+        width: 330px;
+        padding: 1rem 0;
+    }
+    .inp input {
+        font-size: 30px;
+    }
+}
