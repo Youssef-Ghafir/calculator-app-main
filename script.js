@@ -255,7 +255,6 @@ function Start(signe) {
 }
 
 function Delete(value) {
-    EmptyError();
     if(value.slice(-1) === '.') {
         keep = 3;
     }
@@ -294,8 +293,9 @@ numbers.forEach(num => {
 })
 
 delete_btn.addEventListener('click',_ => {
-    CheckScroll();
+    EmptyError();
     input.value = Delete(input.value);
+    CheckScroll();
 })
 let result_show = document.querySelector('.result_show');
     result_show.addEventListener('click', _ => {
