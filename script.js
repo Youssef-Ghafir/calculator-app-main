@@ -308,7 +308,7 @@ function ShowResult() {
     if(result === 'NaN') {
         input.value = 'Error !';
     }else {
-        input.value = +result;
+        input.value = +parseFloat(result).toFixed(3);
     }
     CheckScroll();
     window.scrollTo({
